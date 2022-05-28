@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 25%;
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  padding: 20px 0;
+  background-color: white;
+  overflow: hidden;
+  transition: moveLeft 1s;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(270deg,
+      rgba(157, 73, 73, 0) 0%,
+      rgb(255, 255, 255) 100%);
+  z-index: 100;
+  pointer-events: none;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 100%);
+  z-index: 100;
+  pointer-events: none;
+}
+
+.row-container {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  margin: 1px 0px;
+  transition: all 2s;
+}
+
+.row * {
+  margin: 5px;
+}
+
+.row--1-front,
+.row--3-front {
+  animation: moveLeft 50s linear infinite;
+  -webkit-animation-delay: -25s;
+  -moz-animation-delay: -25s;
+  -ms-animation-delay: -25s;
+  -o-animation-delay: -25s;
+  animation-delay: -25s;
+}
+
+.row--1-back,
+.row--3-back {
+  animation: moveNextLeft 50s linear infinite;
+}
+
+.row--2-front,
+.row--4-front,
+.row--5-front {
+  animation: moveLeft 60s linear infinite;
+  -webkit-animation-delay: -30s;
+  -moz-animation-delay: -30s;
+  -ms-animation-delay: -30s;
+  -o-animation-delay: -30s;
+  animation-delay: -30s;
+}
+
+.row--2-back,
+.row--4-back,
+.row--5-back {
+  animation: moveNextLeft 60s linear infinite;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0px 15px;
+  white-space: nowrap;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  z-index: 50;
+  transition: all 0.2s;
+}
+
+.pill__img {
+  height: 20px;
+  margin-right: 3px;
+}
+
+.pill__text {
+  font-family: helvetica, sans-serif;
+  color: rgb(64, 64, 64);
+}
+
+.pill:hover {
+  transform: scale(1.05);
+}
+
+.pill:hover .pill__text {
+  color: rgb(26, 115, 232, 1);
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moveNextLeft {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
