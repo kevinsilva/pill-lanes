@@ -1,5 +1,5 @@
 import { makeDataCopies } from "./utilities.js";
-import { calculateLayout } from "./calculateLayout.js";
+import { __calculateLayout } from "./calculateLayout.js";
 import {
   createRowContainer,
   createPill,
@@ -39,8 +39,8 @@ describe("create dynamic elements", () => {
   });
   it("returns a row-container for each number of rows", () => {
     //ARRANGE
-    const data1 = calculateLayout.calculate(makeDataCopies(10));
-    const data2 = calculateLayout.calculate(makeDataCopies(50));
+    const data1 = __calculateLayout(makeDataCopies(10));
+    const data2 = __calculateLayout(makeDataCopies(50));
     //ACT
     const test1 = createDynamicElements.create(data1);
     const test2 = createDynamicElements.create(data2);
@@ -50,7 +50,7 @@ describe("create dynamic elements", () => {
   });
 
   it("has a front and a back row for each number of rows", () => {
-    const data = calculateLayout.calculate(makeDataCopies(6));
+    const data = __calculateLayout(makeDataCopies(6));
     const test = createDynamicElements.create(data);
 
     expect(test.rowContainers[0].children.length).toBe(2);
@@ -62,7 +62,7 @@ describe("create dynamic elements", () => {
     );
   });
   it("has one pill element for each data inside of a row", () => {
-    const data1 = calculateLayout.calculate(makeDataCopies(6));
+    const data1 = __calculateLayout(makeDataCopies(6));
     const test1 = createDynamicElements.create(data1);
 
     const row = test1.rowContainers[0].children[0];

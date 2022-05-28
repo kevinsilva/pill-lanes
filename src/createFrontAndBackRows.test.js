@@ -1,5 +1,5 @@
 import { makeDataCopies } from "./utilities.js";
-import { calculateLayout } from "./calculateLayout.js";
+import { __calculateLayout } from "./calculateLayout.js";
 import { createRow, createFrontAndBackRows } from "./createFrontAndBackRows.js";
 
 describe("create front and back rows", () => {
@@ -10,8 +10,8 @@ describe("create front and back rows", () => {
     });
   });
   it("returns a front and back row for each number of rows", () => {
-    const data1 = calculateLayout.calculate(makeDataCopies(10));
-    const data2 = calculateLayout.calculate(makeDataCopies(50));
+    const data1 = __calculateLayout(makeDataCopies(10));
+    const data2 = __calculateLayout(makeDataCopies(50));
 
     const test1 = createFrontAndBackRows.create(data1);
     const test2 = createFrontAndBackRows.create(data2);

@@ -1,9 +1,9 @@
-import { calculateLayout } from "./calculateLayout.js";
+import { __calculateLayout } from "./calculateLayout.js";
 import { makeDataCopies } from "./utilities.js";
 
-describe("calculate layout", () => {
+fdescribe("calculate layout", () => {
   it("returns an object with empty row array", () => {
-    const result = calculateLayout.calculate([]);
+    const result = __calculateLayout([]);
     expect(result).toEqual({
       rows: [],
     });
@@ -13,7 +13,7 @@ describe("calculate layout", () => {
     //ARRANGE
     const data = makeDataCopies(10);
     //ACT
-    const result = calculateLayout.calculate(data);
+    const result = __calculateLayout(data);
     //ASSERT
     expect(result).toEqual({
       rows: [
@@ -24,7 +24,7 @@ describe("calculate layout", () => {
   });
   it("organizes maximum of 5 rows with 6 elements each. More is ignored", () => {
     const data = makeDataCopies(50);
-    const result = calculateLayout.calculate(data);
+    const result = __calculateLayout(data);
 
     expect(result.rows.length).toBe(5);
     result.rows.forEach((row) => expect(row.length).toBe(6));
