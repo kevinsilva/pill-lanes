@@ -1,11 +1,11 @@
 import { makeDataCopies } from "./utilities.js";
 import { __calculateLayout } from "./calculateLayout.js";
-import { createRow, createFrontAndBackRows } from "./createFrontAndBackRows.js";
+import { __createRow, __createFrontAndBackRows } from "./createFrontAndBackRows.js";
 
 describe("create front and back rows", () => {
   describe("create row", () => {
     describe("returns a row", () => {
-      const result = createRow.create();
+      const result = __createRow();
       expect(result.classList).toContain("row");
     });
   });
@@ -13,8 +13,8 @@ describe("create front and back rows", () => {
     const data1 = __calculateLayout(makeDataCopies(10));
     const data2 = __calculateLayout(makeDataCopies(50));
 
-    const test1 = createFrontAndBackRows.create(data1);
-    const test2 = createFrontAndBackRows.create(data2);
+    const test1 = __createFrontAndBackRows(data1);
+    const test2 = __createFrontAndBackRows(data2);
 
     expect(test1.length).toBe(2);
     expect(test2.length).toBe(5);
