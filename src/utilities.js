@@ -16,8 +16,7 @@ export const makeDataCopies = (number) => {
   return result;
 };
 
-export const motorcycleData = [
-  {
+export const motorcycleData = [{
     label: "Triumph",
     img: "img/triumph.png",
     link: "https://www.triumphmotorcycles.com/",
@@ -153,7 +152,7 @@ export const motorcycleData = [
     link: "https://www.nortonmotorcycles.com/",
   },
   {
-    label: "Lambretta<",
+    label: "Lambretta",
     img: "img/lambretta.png",
     link: "https://www.lambretta.com/",
   },

@@ -2,18 +2,132 @@
 
 It's an animated, interactive web component.
 
+![preview](https://media.giphy.com/media/VeJqXHYKcjXDxezoEK/giphy.gif)
+
+Pill-Lanes creates a panel container with moving lanes that have logos on a "pill" format. By moving at different speeds, they show all logos contained in it. Clicking on a "pill" will redirect you to a website.
+
+This project is part of my journey of learning how to code.
+
 ## Implementation Details
 
 Tools (libraries) and techniques used.
+
+The initial approach was to clearly define all the constituent elements of the component and classify them as either static or dynamic. This method was primordial to the further separation of concerns and problem thinking clarification.  Two main tasks were established: the development of a visual manifestation of the component, using HTML and CSS, and the transcription of the functionality to a single JavaScript file.
+
+Having broken down the first main task into smaller ones, I resorted to BEM naming, adapting the already defined elements to the nomenclature. To produce the animation, I have created copies of each lane, each with different moving timings so that the synchronisation creates an illusion of infinite movement.
+
+The second main task started by establishing an array of objects as the data format to be used on the pills. I have transcribed part of the initial problem solving process into unit tests using Jest. Small functions were used to create the static and dynamic elements, to organize the provided data into lanes with a maximum of 6 pills, and to render the created elements to the DOM. Through ES6 modules, I was able to group every small private function into a single JS file.
 
 ## Usage
 
 Instructions for developers that want to use the component.
 
+Import the `pill_lanes` function from `"./src/pill-lanes.js"` directory. The first argument is the data array and the second argument is the document element in which the component will be rendered.
+
+```js
+<script type="module">
+  import { pill_lanes } from "./src/pill-lanes.js";
+  const domEl = document.getElementById("test");
+
+  pill_lanes(data, domEl);
+</script>
+```
+The data to be displayed must be in an array of objects with three properties:
+- `label` , the name to be displayed.
+- `link`, the link's destination.
+- `img`, the image's directory.
+
+```js
+const data = [{
+"label": "ducati",
+"link": "ducati.com",
+"img": "ducati.com/logo.jpg"
+}, {
+"label": "yamaha",
+"link": "yamaha.com",
+"img": "yamaha.com/logo.jpg"
+}]
+```
+
+> **! Note**
+>
+> The component will render a minimum of 1 pill, and a maximum of 30 pills (6 by lane). If more data is provided, it will not be rendered.
+
 ## Development
 
 Instructions for developers that want to run the code in development mode.
 
+To install the component, clone repository, change into directory on the terminal and install with npm.
+
+
+```http
+git clone <repository-url>
+cd pill-lanes
+npm install
+```
+
+Add this to `package.json` scripts property.
+
+```js
+"scripts": {
+  "test": "jest --env=jsdom"
+},
+"babel": {
+  "env": {
+    "test": {
+      "plugins": [
+        "@babel/plugin-transform-modules-commonjs"
+      ]
+    }
+  }
+},
+```
+
+to run the tests.
+```http
+  npm test <file>
+```
+
+
 ## Credits
 
-Credits for images, text, etc.
+Big thanks to my mentor 🎓, [William R. J. Ribeiro](https://github.com/williamrjribeiro/).
+
+All images from:
+
+- [Triumph](https://www.triumphmotorcycles.com/)
+- [Harley Davidson](https://www.harley-davidson.com/us/en/index.html")
+- [Royal Enfield](https://www.royalenfield.com/)
+- [Indian Motorcycle](https://www.indianmotorcycle.com/en-us/)
+- [Brixton Motorcycles](https://www.brixton-motorcycles.com/)
+- [Victory Motorcycles](https://www.victorymotorcycles.com/)
+- [Yamaha](https://www.yamaha-motor.eu/pt/pt/#/)
+- [Kawasaki](https://www.kawasaki.com/en-us/)
+- [Honda](https://powersports.honda.com)
+- [Suzuki](https://suzukicycles.com/)
+- [Hyonsung](https://hyosung.pt/)
+- [Hero](https://www.heromotocorp.com/)
+- [Husqvarna](https://www.husqvarna-motorcycles.com)
+- [KTM](https://www.ktm.com/en-us.html)
+- [BMW Motorrad](https://www.bmwmotorcycles.com/en/home.html#/filter-all)
+- [Peugeot](https://peugeot-motocycles.com/fr/)
+- [Gas Gas](https://www.gasgas.com/)
+- [Bimota](https://bimota.it/?lang=en)
+- [Aprilia](https://www.aprilia.com/)
+- [Benelli](https://www.benelli.com/)
+- [Ducati](https://www.ducati.com/)
+- [Moto Guzzi](https://www.motoguzzi.com/)
+- [Piaggio](https://www.piaggio.com/)
+- [MV Agusta](https://www.mvagusta.com/)
+- [Vespa](https://storeusa.vespa.com/)
+- [Zero](https://www.zeromotorcycles.com/)
+- [Norton](https://www.nortonmotorcycles.com/)
+- [Lambretta](https://www.lambretta.com/)
+- [Beta](https://www.betamotor.com/en/)
+- [Bajaj](https://www.bajajauto.com/)
+
+Inspiration from [Retool](https://retool.com)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
