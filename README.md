@@ -12,11 +12,11 @@ This project is part of my journey of learning how to code.
 
 Tools (libraries) and techniques used.
 
-The initial approach was to clearly define all the constituent elements of the component and classify them as either static or dynamic. This method was primordial to the further separation of concerns and problem thinking clarification.  Two main tasks were established: the development of a visual manifestation of the component, using HTML and CSS, and the transcription of the functionality to a single JavaScript file.
+The initial approach was to clearly define all the constituent elements of the component and classify them as either static or dynamic. This method was primordial to the further separation of concerns and problem thinking clarification. Two main tasks were established: the development of a visual manifestation of the component, using HTML and CSS, and the transcription of the functionality to a single JavaScript file.
 
-Having broken down the first main task into smaller ones, I resorted to BEM naming, adapting the already defined elements to the nomenclature. To produce the animation, I have created copies of each lane, each with different moving timings so that the synchronisation creates an illusion of infinite movement.
+Having broken down the first main task into smaller ones, I resorted to [BEM](http://getbem.com/naming/) naming, adapting the already defined elements to the nomenclature. To produce the animation, I have created copies of each lane, each with different moving timings so that the synchronisation creates an illusion of infinite movement.
 
-The second main task started by establishing an array of objects as the data format to be used on the pills. I have transcribed part of the initial problem solving process into unit tests using Jest. Small functions were used to create the static and dynamic elements, to organize the provided data into lanes with a maximum of 6 pills, and to render the created elements to the DOM. Through ES6 modules, I was able to group every small private function into a single JS file.
+The second main task started by establishing an array of objects as the data format to be used on the pills. I have transcribed part of the initial problem solving process into unit tests using [Jest](https://jestjs.io/). Small functions were used to create the static and dynamic elements, to organize the provided data into lanes with a maximum of 6 pills, and to render the created elements to the DOM. They were prefixed with a double underscore privacy convention as they are meant to compute business logic, and should not be accessible. Through ES6 modules, I was able to group every small tested "private" function into a single JS file.
 
 ## Usage
 
@@ -26,39 +26,43 @@ Import the `pill_lanes` function from `"./src/pill-lanes.js"` directory. The fir
 
 ```js
 <script type="module">
-  import { pill_lanes } from "./src/pill-lanes.js";
-  const domEl = document.getElementById("test");
-
-  pill_lanes(data, domEl);
+  import {pill_lanes} from "./src/pill-lanes.js"; const domEl =
+  document.getElementById("test"); pill_lanes(data, domEl);
 </script>
 ```
+
 The data to be displayed must be in an array of objects with three properties:
+
 - `label` , the name to be displayed.
 - `link`, the link's destination.
 - `img`, the image's directory.
 
 ```js
-const data = [{
-"label": "ducati",
-"link": "ducati.com",
-"img": "ducati.com/logo.jpg"
-}, {
-"label": "yamaha",
-"link": "yamaha.com",
-"img": "yamaha.com/logo.jpg"
-}]
+const data = [
+  {
+    label: "ducati",
+    link: "ducati.com",
+    img: "ducati.com/logo.jpg",
+  },
+  {
+    label: "yamaha",
+    link: "yamaha.com",
+    img: "yamaha.com/logo.jpg",
+  },
+];
 ```
 
 > **! Note**
 >
 > The component will render a minimum of 1 pill, and a maximum of 30 pills (6 by lane). If more data is provided, it will not be rendered.
 
+I did not include a production bundle because it was not part of my focus for this project.
+
 ## Development
 
 Instructions for developers that want to run the code in development mode.
 
 To install the component, clone repository, change into directory on the terminal and install with npm.
-
 
 ```http
 git clone <repository-url>
@@ -83,11 +87,11 @@ Add this to `package.json` scripts property.
 },
 ```
 
-to run the tests.
+To run the tests.
+
 ```http
   npm test <file>
 ```
-
 
 ## Credits
 
@@ -126,7 +130,7 @@ All images from:
 - [Beta](https://www.betamotor.com/en/)
 - [Bajaj](https://www.bajajauto.com/)
 
-Inspiration from [Retool](https://retool.com)
+Inspiration from [Retool](https://retool.com).
 
 ## License
 

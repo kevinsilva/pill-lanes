@@ -1,7 +1,7 @@
 import { __calculateLayout } from "./calculateLayout.js";
 import { makeDataCopies } from "./utilities.js";
 
-fdescribe("calculate layout", () => {
+describe("calculate layout", () => {
   it("returns an object with empty row array", () => {
     const result = __calculateLayout([]);
     expect(result).toEqual({
