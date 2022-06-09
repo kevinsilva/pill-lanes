@@ -2,7 +2,7 @@
 
 It's an animated, interactive web component.
 
-![preview](https://media.giphy.com/media/VeJqXHYKcjXDxezoEK/giphy.gif)
+![preview](img/pill-lanes.gif)
 
 Pill-Lanes creates a panel container with moving lanes that have logos on a "pill" format. By moving at different speeds, they show all logos contained in it. Clicking on a "pill" will redirect you to a website.
 
@@ -16,7 +16,7 @@ The initial approach was to clearly define all the constituent elements of the c
 
 Having broken down the first main task into smaller ones, I resorted to [BEM](http://getbem.com/naming/) naming, adapting the already defined elements to the nomenclature. To produce the animation, I have created copies of each lane, each with different moving timings so that the synchronisation creates an illusion of infinite movement.
 
-The second main task started by establishing an array of objects as the data format to be used on the pills. I have transcribed part of the initial problem solving process into unit tests using [Jest](https://jestjs.io/). Small functions were used to create the static and dynamic elements, to organize the provided data into lanes with a maximum of 6 pills, and to render the created elements to the DOM. They were prefixed with a double underscore privacy convention as they are meant to compute business logic, and should not be accessible. Through ES6 modules, I was able to group every small tested "private" function into a single JS file.
+The second main task started by establishing an array of objects as the data format to be used on the pills. I have transcribed part of the initial problem solving process into unit tests using [Jest](https://jestjs.io/). Small functions were used to create the static and dynamic elements, to organize the provided data into lanes with a maximum of 6 pills, and to render the created elements to the DOM. They are prefixed with the double underscore privacy convention as they are meant to compute business logic, and should not be accessible. Through ES6 modules, I was able to group every small tested "private" function into a single JS file.
 
 ## Usage
 
