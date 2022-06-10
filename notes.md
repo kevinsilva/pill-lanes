@@ -1,5 +1,3 @@
-https://retool.com/
-
 ## Estático
 
 Pílulas: container rectangular com bordas arredondadas
@@ -23,7 +21,7 @@ Container: limites laterais esquerdo e direito têm efeito de fade
 
 A- ~~Construir uma Linha: elementos da Linha aparecem em linha com margem entre eles.~~
 
-A.1 - Animar da direita para a esquerda, os elementos de uma Linha, com velocidade rápida ou normal.
+A.1 - ~~Animar da direita para a esquerda, os elementos de uma Linha, com velocidade rápida ou normal.~~
 
 B - ~~Construir uma Pílula que tenha imagem e texto, formato, e sombra; e seja link.~~
 
@@ -58,5 +56,4 @@ o que é dinâmico: rows e as pills
 o que é estático: container e row-container
 
 - criar elementos estáticos
-
 - criar elementos dinâmicos
