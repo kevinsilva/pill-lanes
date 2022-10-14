@@ -1,20 +1,20 @@
-import { __calculateLayout } from "./calculateLayout.js";
-import { makeDataCopies } from "./utilities.js";
+import __calculateLayout from './calculateLayout.js';
+import { makeDataCopies } from './utilities.js';
 
-describe("calculate layout", () => {
-  it("returns an object with empty row array", () => {
+describe('calculate layout', () => {
+  it('returns an object with empty row array', () => {
     const result = __calculateLayout([]);
     expect(result).toEqual({
       rows: [],
     });
   });
 
-  it("organizes the data into rows of 6 elements each", () => {
-    //ARRANGE
+  it('organizes the data into rows of 6 elements each', () => {
+    // ARRANGE
     const data = makeDataCopies(10);
-    //ACT
+    // ACT
     const result = __calculateLayout(data);
-    //ASSERT
+    // ASSERT
     expect(result).toEqual({
       rows: [
         [data[0], data[1], data[2], data[3], data[4], data[5]],
@@ -22,7 +22,7 @@ describe("calculate layout", () => {
       ],
     });
   });
-  it("organizes maximum of 5 rows with 6 elements each. More is ignored", () => {
+  it('organizes maximum of 5 rows with 6 elements each. More is ignored', () => {
     const data = makeDataCopies(50);
     const result = __calculateLayout(data);
 

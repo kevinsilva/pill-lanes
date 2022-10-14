@@ -1,33 +1,33 @@
-import { __createFrontAndBackRows } from "./createFrontAndBackRows.js";
+import { __createFrontAndBackRows } from './createFrontAndBackRows.js';
 
 export const __createRowContainer = () => {
-  const rowContainer = document.createElement("div");
-  rowContainer.classList.add("row-container");
+  const rowContainer = document.createElement('div');
+  rowContainer.classList.add('row-container');
   return rowContainer;
-}
+};
 
 export const __createPill = (data) => {
-  const pill = document.createElement("a");
-  pill.classList.add("pill");
+  const pill = document.createElement('a');
+  pill.classList.add('pill');
   pill.href = data.link;
-  pill.target = "_blank";
+  pill.target = '_blank';
 
-  //img
-  const img = document.createElement("img");
-  img.classList.add("pill__img");
+  // img
+  const img = document.createElement('img');
+  img.classList.add('pill__img');
   img.src = data.img;
 
   pill.appendChild(img);
 
-  //text
-  const text = document.createElement("p");
-  text.classList.add("pill__text");
+  // text
+  const text = document.createElement('p');
+  text.classList.add('pill__text');
   text.textContent = data.label;
 
   pill.appendChild(text);
 
   return pill;
-}
+};
 
 export const __createDynamicElements = (data) => {
   const result = [];
@@ -53,4 +53,4 @@ export const __createDynamicElements = (data) => {
   return {
     rowContainers: result,
   };
-}
+};

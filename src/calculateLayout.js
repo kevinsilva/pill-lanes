@@ -1,8 +1,9 @@
-export const __calculateLayout = (input) => {
-  if (input === null || input.length === 0)
+const __calculateLayout = (input) => {
+  if (input === null || input.length === 0) {
     return {
       rows: [],
     };
+  }
 
   const result = [];
   let row = [];
@@ -23,3 +24,5 @@ export const __calculateLayout = (input) => {
     rows: result,
   };
 };
+
+export default __calculateLayout;

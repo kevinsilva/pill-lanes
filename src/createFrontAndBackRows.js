@@ -1,11 +1,11 @@
 export const __createRow = () => {
-  const row = document.createElement("div");
-  row.classList.add("row");
+  const row = document.createElement('div');
+  row.classList.add('row');
   return row;
-}
+};
 
 export const __createFrontAndBackRows = (data) => {
-  let result = [];
+  const result = [];
 
   for (const [index] of data.rows.entries()) {
     const row = {};
@@ -17,4 +17,4 @@ export const __createFrontAndBackRows = (data) => {
   }
 
   return result;
-}
+};

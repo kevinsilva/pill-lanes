@@ -22,12 +22,12 @@ The second main task started by establishing an array of objects as the data for
 
 Instructions for developers that want to use the component.
 
-Import the `pill_lanes` function from `"./src/pill-lanes.js"` directory. The first argument is the data array and the second argument is the document element in which the component will be rendered.
+Import the `pillLanes` function from `"./src/pill-lanes.js"` directory. The first argument is the data array and the second argument is the document element in which the component will be rendered.
 
 ```js
 <script type="module">
-  import {pill_lanes} from "./src/pill-lanes.js"; const domEl =
-  document.getElementById("test"); pill_lanes(data, domEl);
+  import {pillLanes} from "./src/pill-lanes.js"; const domEl =
+  document.getElementById("test"); pillLanes(data, domEl);
 </script>
 ```
 
