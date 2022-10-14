@@ -65,7 +65,7 @@ Instructions for developers that want to run the code in development mode.
 To install the component, clone repository, change into directory on the terminal and install with npm.
 
 ```http
-git clone <repository-url>
+git clone https://github.com/kevinsilva/pill-lanes
 cd pill-lanes
 npm install
 ```
