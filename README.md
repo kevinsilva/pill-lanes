@@ -12,7 +12,7 @@ This project is part of my journey of learning how to code.
 
 Tools (libraries) and techniques used.
 
-The initial approach was to clearly define all the constituent elements of the component and classify them as either static or dynamic. This method was primordial to the further separation of concerns and problem thinking clarification. Two main tasks were established: the development of a visual manifestation of the component, using HTML and CSS, and the transcription of the functionality to a single JavaScript file.
+The initial approach was to clearly define all the constituent elements of the component and classify them as either static or dynamic. This method was primordial to the further separation of concerns and problem thinking clarification. Two main tasks were established: the development of a visual manifestation of the component, using HTML and [SASS](https://sass-lang.com/), and the transcription of the functionality to a single JavaScript file.
 
 Having broken down the first main task into smaller ones, I resorted to [BEM](http://getbem.com/naming/) naming, adapting the already defined elements to the nomenclature. To produce the animation, I have created copies of each lane, each with different moving timings so that the synchronisation creates an illusion of infinite movement.
 

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --env=jsdom"
+    "test": "jest --env=jsdom",
+    "compile:sass": "sass --watch sass/style.scss style.css"
   },
   "babel": {
     "env": {
@@ -20,7 +21,8 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.17.9",
-    "jest": "^28.1.0"
+    "jest": "^28.1.0",
+    "sass": "^1.55.0"
   },
   "dependencies": {
     "jest-environment-jsdom": "^28.1.0"
