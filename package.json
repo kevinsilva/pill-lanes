@@ -29,6 +29,7 @@
     "sass": "^1.55.0"
   },
   "dependencies": {
-    "jest-environment-jsdom": "^28.1.0"
+    "jest-environment-jsdom": "^28.1.0",
+    "live-server": "^1.2.2"
   }
 }
