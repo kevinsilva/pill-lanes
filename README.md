@@ -9,6 +9,7 @@ Pill-Lanes creates a panel container with moving lanes that have logos on a "pil
 This project is part of my journey of learning how to code.
 
 Open in [codesandbox](https://codesandbox.io/p/github/kevinsilva/pill-lanes/draft/crimson-http?file=%2FREADME.md)
+
 ## Implementation Details
 
 Tools (libraries) and techniques used.
