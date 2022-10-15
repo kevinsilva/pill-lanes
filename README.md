@@ -2,12 +2,13 @@
 
 It's an animated, interactive web component.
 
-![preview](img/pill-lanes.gif)
+![preview](/img/pill-lanes.gif)
 
 Pill-Lanes creates a panel container with moving lanes that have logos on a "pill" format. By moving at different speeds, they show all logos contained in it. Clicking on a "pill" will redirect you to a website.
 
 This project is part of my journey of learning how to code.
 
+Open in [codesandbox](https://codesandbox.io/p/github/kevinsilva/pill-lanes/draft/crimson-http?file=%2FREADME.md)
 ## Implementation Details
 
 Tools (libraries) and techniques used.
