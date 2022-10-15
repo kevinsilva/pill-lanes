@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --env=jsdom",
     "compile:sass": "sass --watch sass/style.scss style.css",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "dev": "live-server"
   },
   "babel": {
     "env": {
@@ -26,9 +27,8 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "jest": "^28.1.0",
-    "sass": "^1.55.0"
-  },
-  "dependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.55.0",
     "jest-environment-jsdom": "^28.1.0"
   }
 }

@@ -57,3 +57,8 @@ o que é estático: container e row-container
 
 - criar elementos estáticos
 - criar elementos dinâmicos
+
+Finalidade do live-server
+- cria um servidor para se poder ver o projecto no browser
+- cria um servidor http para disponibilizar o projecto / app na internet através do browser.
+- extensão do vscode 

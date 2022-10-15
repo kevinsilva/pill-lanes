@@ -64,32 +64,21 @@ Instructions for developers that want to run the code in development mode.
 
 To install the component, clone repository, change into directory on the terminal and install with npm.
 
-```http
+```bash
 git clone https://github.com/kevinsilva/pill-lanes
 cd pill-lanes
 npm install
 ```
 
-Add this to `package.json` scripts property.
+To run the application.
 
-```js
-"scripts": {
-  "test": "jest --env=jsdom"
-},
-"babel": {
-  "env": {
-    "test": {
-      "plugins": [
-        "@babel/plugin-transform-modules-commonjs"
-      ]
-    }
-  }
-},
+```bash
+  npm run dev
 ```
 
 To run the tests.
 
-```http
+```bash
   npm test <file>
 ```
 
