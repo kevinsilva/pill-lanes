@@ -67,10 +67,6 @@ body {
   &--1-front,
   &--3-front {
     animation: moveLeft 50s linear infinite;
-    -webkit-animation-delay: -25s;
-    -moz-animation-delay: -25s;
-    -ms-animation-delay: -25s;
-    -o-animation-delay: -25s;
     animation-delay: -25s;
   }
 
@@ -82,10 +78,6 @@ body {
   &--4-front,
   &--5-front {
     animation: moveLeft 60s linear infinite;
-    -webkit-animation-delay: -30s;
-    -moz-animation-delay: -30s;
-    -ms-animation-delay: -30s;
-    -o-animation-delay: -30s;
     animation-delay: -30s;
   }
 

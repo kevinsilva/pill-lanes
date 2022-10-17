@@ -7,6 +7,7 @@
     "test": "jest --env=jsdom",
     "compile:sass": "sass --watch sass/style.scss style.css",
     "lint": "eslint src/",
+    "prefix:css": "postcss -use autoprefixer -b 'last 10 versions' style.css -o style.prefix.css",
     "dev": "live-server"
   },
   "babel": {
@@ -23,12 +24,14 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.17.9",
+    "autoprefixer": "^10.4.12",
     "eslint": "^8.25.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
     "live-server": "^1.2.2",
-    "sass": "^1.55.0",
-    "jest-environment-jsdom": "^28.1.0"
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.55.0"
   }
 }
