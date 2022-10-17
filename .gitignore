@@ -27,3 +27,6 @@ npm-debug.log*
 # SASS
 .sass-cache/
 *.css.map
+
+# Other
+.browserslistrc
