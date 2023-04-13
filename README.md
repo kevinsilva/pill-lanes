@@ -8,7 +8,7 @@ Pill-Lanes creates a panel container with moving lanes that have logos on a "pil
 
 This project is part of my journey of learning how to code.
 
-[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-success?style=flat-square&logo=codesandbox)](https://codesandbox.io/p/github/kevinsilva/pill-lanes/draft/crimson-http?file=%2FREADME.md)
+[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-success?style=flat-square&logo=codesandbox)](https://codesandbox.io/p/github/kevinsilva/pill-lanes/master?file=%2FREADME.md&workspace=%257B%2522activeFilepath%2522%253A%2522%252FREADME.md%2522%252C%2522openFiles%2522%253A%255B%2522%252FREADME.md%2522%255D%252C%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522gitSidebarPanel%2522%253A%2522COMMIT%2522%252C%2522spaces%2522%253A%257B%2522clgf0rj6b000x3b6ivfurxyq5%2522%253A%257B%2522key%2522%253A%2522clgf0rj6b000x3b6ivfurxyq5%2522%252C%2522name%2522%253A%2522Default%2522%252C%2522devtools%2522%253A%255B%257B%2522type%2522%253A%2522PREVIEW%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522port%2522%253A8080%252C%2522key%2522%253A%2522clgf0rj6b000y3b6i9r77nk9a%2522%252C%2522isMinimized%2522%253Afalse%257D%255D%257D%257D%252C%2522currentSpace%2522%253A%2522clgf0rj6b000x3b6ivfurxyq5%2522%252C%2522spacesOrder%2522%253A%255B%2522clgf0rj6b000x3b6ivfurxyq5%2522%255D%252C%2522hideCodeEditor%2522%253Afalse%257D)
 
 ## Implementation Details
 
@@ -42,14 +42,14 @@ The data to be displayed must be in an array of objects with three properties:
 ```js
 const data = [
   {
-    label: "ducati",
-    link: "ducati.com",
-    img: "ducati.com/logo.jpg",
+    label: 'ducati',
+    link: 'ducati.com',
+    img: 'ducati.com/logo.jpg',
   },
   {
-    label: "yamaha",
-    link: "yamaha.com",
-    img: "yamaha.com/logo.jpg",
+    label: 'yamaha',
+    link: 'yamaha.com',
+    img: 'yamaha.com/logo.jpg',
   },
 ];
 ```
